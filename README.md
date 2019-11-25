@@ -42,6 +42,8 @@ The output is saved in a .mat file containing the following variables:
 ## Example
 Example image
 
+![example_image](https://user-images.githubusercontent.com/29472614/69578247-1af90c00-0f9e-11ea-87ec-8a08cfcda3d1.png)
+
 Run PAUL procedure
 ```matlab
 >> batchMTComputation('example_result',example_image,32,8,0.1376,0.076,[],5,1000);
