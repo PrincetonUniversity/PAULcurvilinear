@@ -16,7 +16,6 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio);
 batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio, estimatedLp);
 batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio, estimatedLp, gridPtUnit);
-
 ```
 
 ## Input arguments
@@ -40,11 +39,8 @@ The output is saved in a .mat file containing the following variables:
 
 
 ## Example
-Example image (/examples/example_image.mat)
 
-![example_image](https://user-images.githubusercontent.com/29472614/69578511-a5417000-0f9e-11ea-9671-0cffeab60c0e.png)
-
-Run PAUL procedure
+Run PAUL procedure on an example image (/examples/example_image.mat)
 ```matlab
 >> batchMTComputation('example_result',example_image,32,8,0.1376,0.076,[],5,1000);
 ```
@@ -61,6 +57,7 @@ for i = 1:length(FinalX_central_allGps)
     plot(FinalX_LB95_allGps{i},FinalY_LB95_allGps{i},'--','Color',[0.9290, 0.6940, 0.1250],'LineWidth',0.5);
 end
 ```
+![example_image](https://user-images.githubusercontent.com/29472614/69578511-a5417000-0f9e-11ea-9671-0cffeab60c0e.png)
 ![example_result](https://user-images.githubusercontent.com/29472614/69578512-a5417000-0f9e-11ea-9d1a-bf38c5caf214.png)
 
 
