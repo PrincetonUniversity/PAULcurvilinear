@@ -2,7 +2,7 @@
 Implementation of PAUL framwork on curvilinear features.
 
 ## Requirements
-The code uses the following toolboxes and version at the stage of development; earlier versions might also work:
+The code uses the following toolboxes and versions at the stage of development; earlier versions might also work:
 * 'MATLAB' '9.6'
 * 'Image Processing Toolbox' '10.4' 
 * 'Statistics and Machine Learning Toolbox' '11.5' 
@@ -40,3 +40,25 @@ The output is saved in a .mat file containing the following variables:
 
 
 ## Example
+Example image
+
+Run PAUL procedure
+```matlab
+>> batchMTComputation('example_result',example_image,32,8,0.1376,0.076,[],5,1000);
+```
+
+Plot the result
+```matlab
+load('example_image.mat');
+load('example_result_Division_32x8.mat');
+imagesc(example_image)
+hold on
+for i = 1:length(FinalX_central_allGps)
+    plot(FinalX_central_allGps{i},FinalY_central_allGps{i},'Color',[0.3010, 0.7450, 0.9330],'LineWidth',0.5);
+    plot(FinalX_UB95_allGps{i},FinalY_UB95_allGps{i},'--','Color',[0.9290, 0.6940, 0.1250],'LineWidth',0.5);
+    plot(FinalX_LB95_allGps{i},FinalY_LB95_allGps{i},'--','Color',[0.9290, 0.6940, 0.1250],'LineWidth',0.5);
+end
+```
+
+
+
