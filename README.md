@@ -33,10 +33,10 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 
 ## Output
 The output is saved in a .mat file containing the following variables:
-* `FinalX_central_allGps` (or `FinalX_central_allGps_allIMs`), `FinalY_central_allGps` (or `FinalY_central_allGps_allIMs`) — x and y coordinates of the final PAUL principal curve.
-* `FinalX_UB95_allGps` (or `FinalX_UB95_allGps_allIMs`), `FinalY_UB95_allGps` (or `FinalY_UB95_allGps_allIMs`) — x and y coordinates of the upper bound of the final PAUL principal curve.
-* `FinalX_LB95_allGps` (or `FinalX_LB95_allGps_allIMs`), `FinalY_LB95_allGps` (or `FinalY_LB95_allGps_allIMs`) — x and y coordinates of the lower bound of the final PAUL principal curve.
-
+* `FinalX_central_allGps` (or `FinalX_central_allGps_allIMs`), `FinalY_central_allGps` (or `FinalY_central_allGps_allIMs`) — x and y coordinates of the final PAUL principal curve, in the pixel space.
+* `FinalX_UB95_allGps` (or `FinalX_UB95_allGps_allIMs`), `FinalY_UB95_allGps` (or `FinalY_UB95_allGps_allIMs`) — x and y coordinates of the upper bound of the final PAUL principal curve, in the pixel space.
+* `FinalX_LB95_allGps` (or `FinalX_LB95_allGps_allIMs`), `FinalY_LB95_allGps` (or `FinalY_LB95_allGps_allIMs`) — x and y coordinates of the lower bound of the final PAUL principal curve, in the pixel space.
+* `medium95PercError` (or `medium95PercError_allIMs`) — medians of all 95% bootstrap bounds, in the unit of pixels.
 
 ## Example
 
