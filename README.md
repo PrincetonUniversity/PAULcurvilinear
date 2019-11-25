@@ -40,9 +40,9 @@ The output is saved in a .mat file containing the following variables:
 
 
 ## Example
-Example image
+Example image (/examples/example_image.mat)
 
-![example_image](https://user-images.githubusercontent.com/29472614/69578247-1af90c00-0f9e-11ea-87ec-8a08cfcda3d1.png)
+![example_image](https://user-images.githubusercontent.com/29472614/69578511-a5417000-0f9e-11ea-9671-0cffeab60c0e.png)
 
 Run PAUL procedure
 ```matlab
@@ -51,16 +51,16 @@ Run PAUL procedure
 
 Plot the result
 ```matlab
-load('example_image.mat');
-load('example_result_Division_32x8.mat');
+load('/examples/example_image.mat');
+load('/examples/example_result_Division_32x8.mat');
 imagesc(example_image)
 hold on
 for i = 1:length(FinalX_central_allGps)
-    plot(FinalX_central_allGps{i},FinalY_central_allGps{i},'Color',[0.3010, 0.7450, 0.9330],'LineWidth',0.5);
+    plot(FinalX_central_allGps{i},FinalY_central_allGps{i},'Color',[0.3010, 0.7450, 0.9330],'LineWidth',0.6);
     plot(FinalX_UB95_allGps{i},FinalY_UB95_allGps{i},'--','Color',[0.9290, 0.6940, 0.1250],'LineWidth',0.5);
     plot(FinalX_LB95_allGps{i},FinalY_LB95_allGps{i},'--','Color',[0.9290, 0.6940, 0.1250],'LineWidth',0.5);
 end
 ```
-
+![example_result](https://user-images.githubusercontent.com/29472614/69578512-a5417000-0f9e-11ea-9d1a-bf38c5caf214.png)
 
 
