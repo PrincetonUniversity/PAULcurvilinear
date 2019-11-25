@@ -28,7 +28,7 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 * `beta` — the beta parameter in stage one. Default is 0.5. Put `[]` if using the default value.
 * `cRatio` — the c parameter in stage one, in the unit of the maximum Frobenius norm of the Hessian. Default is 2. Put `[]` if using the default value.
 * `estimatedLp` — the estimated persistence length of the features to be detected, in the unit of micrometers. Default is 5200. Put `[]` if using the default value.
-* `gridPtUnit` — the grid point density in the final PAUL principal curve, in the unit of pixels. Default is 0.1. Put `[]` if using the default value.
+* `gridPtUnit` — the grid point density in the final PAUL principal curve, in the unit of pixels. Default is 0.1.
 
 
 ## Output
