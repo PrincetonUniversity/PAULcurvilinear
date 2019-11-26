@@ -21,7 +21,7 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 ## Input arguments
 * `OutputFileName` — the string that contains the output file name.
 * `image2D` — numeric array of a single input image or cells of numeric arrays of multiple images. The input image needs to be **square** (e.g. 512 x 512 pixels). The pixel values can be 8-bit, 16-bit or double. The image can be grayscale or RGB (will be converted into grayscale in the code).
-* `GridSize` — the side of the sub image used in stage two. The image side should be divisible by this number (e.g. for 512 x 512 images, `GridSize` can only be one of {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}).
+* `GridSize` — the side of the sub image used in stage two. It should divide the image side (e.g. for 512 x 512 images, `GridSize` can only be one of {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}).
 * `NumOfShifts` — the number of shifts applied in stage two.
 * `PSFsigma` — the standard deviation of the approximated Gaussian point-spread function (PSF), in the unit of micrometers.
 * `pixelSize` — the side of the pixel, in the unit of micrometers.
