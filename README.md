@@ -21,12 +21,12 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 ## Input arguments
 * `OutputFileName` — the string that contains the output file name.
 * `image2D` — numeric array of a single input image or cells of numeric arrays of multiple images. The input image needs to be **square** (e.g. 512 x 512 pixels). The pixel values can be 8-bit, 16-bit or double. The image can be grayscale or RGB (will be converted into grayscale in the code).
-* `GridSize` — the side of the sub image used in stage two. It should divide the image side (e.g. for 512 x 512 images, `GridSize` can only be one of {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}).
+* `GridSize` — the side of the sub image used in stage two. It should divide the image side (e.g. for 512 x 512 images, `GridSize` cannot fall out of {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}).
 * `NumOfShifts` — the number of shifts applied in stage two.
 * `PSFsigma` — the standard deviation of the approximated Gaussian point-spread function (PSF), in the unit of micrometers.
 * `pixelSize` — the side of the pixel, in the unit of micrometers.
 * `beta` — the beta parameter in stage one. Default is 0.5. Put `[]` if using the default value.
-* `cRatio` — the c parameter in stage one, in the unit of the maximum Frobenius norm of the Hessian. Default is 2. Put `[]` if using the default value.
+* `cRatio` — the ratio between $2c^2$ and $S^2$ in stage one. Default is 2 ($c=S)$. Put `[]` if using the default value.
 * `estimatedLp` — the estimated persistence length of the features to be detected, in the unit of micrometers. Default is 5200. Put `[]` if using the default value.
 * `gridPtUnit` — the grid point density in the final PAUL principal curve, in the unit of pixels. Default is 0.1.
 
