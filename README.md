@@ -58,6 +58,6 @@ for i = 1:length(FinalX_central_allGps)
 end
 ```
 ![example_image](https://user-images.githubusercontent.com/29472614/69578511-a5417000-0f9e-11ea-9671-0cffeab60c0e.png)
-![example_result](https://user-images.githubusercontent.com/29472614/69578512-a5417000-0f9e-11ea-9d1a-bf38c5caf214.png)
+![example_result](example/example_image_result.png)
 
 
