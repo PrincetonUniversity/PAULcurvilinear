@@ -26,7 +26,7 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 * `PSFsigma` — the standard deviation of the approximated Gaussian point-spread function (PSF), in the unit of micrometers.
 * `pixelSize` — the side of the pixel, in the unit of micrometers.
 * `beta` — the beta parameter in stage one. Default is 0.5. Put `[]` if using the default value.
-* `cRatio` — the ratio between 2c^2 and S^2 in stage one. Default is 2 (c=S). Put `[]` if using the default value.
+* `cRatio` — the ratio between 2c^2 and maximum S^2 in stage one. Default is 2 (c=max(S)). Put `[]` if using the default value.
 * `estimatedLp` — the estimated persistence length of the features to be detected, in the unit of micrometers. Default is 5200. Put `[]` if using the default value.
 * `gridPtUnit` — the grid point density in the final PAUL principal curve, in the unit of pixels. Default is 0.1.
 
