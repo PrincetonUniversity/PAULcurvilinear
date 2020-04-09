@@ -9,7 +9,7 @@ else
     [indent repmat(imDimxy,1,numSubImxy-1) imDimxy-indent],...
     [indent repmat(imDimxy,1,numSubImxy-1) imDimxy-indent]);
 end
-%% Pre-processing B: Smoothing (gaussfilt on each subimage)
+%% Smoothing (gaussfilt on each subimage)
 IM_smoothed=cellfun(@imgaussfilt,IMraw_split2D,...
     repmat({GaussFilterSigma},size(IMraw_split2D)),'UniformOutput',false);
 %% Binarize again on each sub (to ensure proper skeletonization)

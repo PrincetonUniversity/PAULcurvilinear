@@ -38,7 +38,7 @@ ALLfiltered(isnan(ALLfiltered)) = 0;
 % Return for every pixel the value of the scale(sigma) with the maximum 
 % output pixel value
 
-%%%%%%%%%%%% Return maximum on the gridded sigma values
+%%%%%%%%%%%% Return maximum on the gridded sigma values (saves time)
 % if length(sigmas) > 1
 %     [outIm,~] = max(ALLfiltered,[],3);
 %     outputIM = reshape(outIm,size(contrastEnhancedIM));

@@ -1,5 +1,5 @@
 # Prior-Apprised Unsupervised Learning (PAUL) of curvilinear features
-Implementation of PAUL framwork on curvilinear features.
+Implementation of PAUL framwork on curvilinear features. Please cite the associated publication as: Yin, S., Tien, M. & Yang, H. (2020) Prior-Apprised Unsupervised Learning of Sub-Pixel Curvilinear Features in Low Signal-to-Noise Images. <em>Biophys. J.</em>
 
 ## Requirements
 The code uses the following toolboxes and versions at the stage of development; earlier versions might also work:
@@ -40,7 +40,7 @@ The output is saved in a .mat file containing the following variables:
 
 ## Example
 
-Run PAUL procedure on an example image (examples/image1.mat)
+Run PAUL procedure on an example image ('examples/image1.mat')
 ```matlab
 >> load('examples/image1.mat');
 >> batchMTComputation('example_result',example_image,32,8,0.1376,0.076,[],5,1000);
