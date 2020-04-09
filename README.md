@@ -40,15 +40,16 @@ The output is saved in a .mat file containing the following variables:
 
 ## Example
 
-Run PAUL procedure on an example image (/examples/example_image.mat)
+Run PAUL procedure on an example image (examples/image1.mat)
 ```matlab
+>> load('examples/image1.mat');
 >> batchMTComputation('example_result',example_image,32,8,0.1376,0.076,[],5,1000);
 ```
 
 Plot the result
 ```matlab
-load('examples/example_image.mat');
-load('examples/example_result_Division_32x8.mat');
+load('examples/image1.mat');
+load('examples/image1_result_Division_32x8.mat');
 imagesc(example_image)
 hold on
 for i = 1:length(FinalX_central_allGps)
@@ -57,7 +58,7 @@ for i = 1:length(FinalX_central_allGps)
     plot(FinalX_LB95_allGps{i},FinalY_LB95_allGps{i},'--','Color',[0.9290, 0.6940, 0.1250],'LineWidth',0.5);
 end
 ```
-![example_image](example/example_image.png)
-![example_result](example/example_image_result.png)
+![example_image](examples/image1_display.png)
+![example_result](examples/image1_result.png)
 
 
