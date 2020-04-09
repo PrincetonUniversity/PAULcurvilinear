@@ -47,8 +47,8 @@ Run PAUL procedure on an example image (/examples/example_image.mat)
 
 Plot the result
 ```matlab
-load('/examples/example_image.mat');
-load('/examples/example_result_Division_32x8.mat');
+load('examples/example_image.mat');
+load('examples/example_result_Division_32x8.mat');
 imagesc(example_image)
 hold on
 for i = 1:length(FinalX_central_allGps)
