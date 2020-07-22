@@ -1,5 +1,5 @@
 # Prior-Apprised Unsupervised Learning (PAUL) of curvilinear features (3D)
-Implementation of 3D PAUL framwork on curvilinear features. Please cite the associated publication as: Yin, S., Amin, M. J., Emerson, N, T. & Yang, H. (2020). Three-dimensional super line-localization in low signal-to-noise microscope images via prior-apprised unsupervised learning (PAUL). <em>Proc. SPIE</em>, <em>accepted<em>.
+Implementation of 3D PAUL framwork on curvilinear features. Please cite the associated publication as: Yin, S., Amin, M. J., Emerson, N, T. & Yang, H. (2020). Three-dimensional super line-localization in low signal-to-noise microscope images via prior-apprised unsupervised learning (PAUL). <em>Proc. SPIE</em>, <em>accepted</em>.
 
 ## Requirements
 The code uses the following toolboxes and versions at the stage of development; earlier versions might also work:
