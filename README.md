@@ -1,5 +1,5 @@
 # Prior-Apprised Unsupervised Learning (PAUL) of curvilinear features (3D)
-Implementation of 3D PAUL framwork on curvilinear features. Please cite the associated publication as: Yin, S., Tien, M. & Yang, H. (2020). Prior-Apprised Unsupervised Learning of Sub-Pixel Curvilinear Features in Low Signal-to-Noise Images. <em>Biophys. J.</em>, **118**, 2458-2469.
+Implementation of 3D PAUL framwork on curvilinear features. Please cite the associated publication as: Yin, S., Amin, M. J., Emerson, N, T. & Yang, H. (2020). Three-dimensional super line-localization in low signal-to-noise microscope images via prior-apprised unsupervised learning (PAUL). <em>Proc. SPIE</em>, <em>accepted<em>.
 
 ## Requirements
 The code uses the following toolboxes and versions at the stage of development; earlier versions might also work:
@@ -11,16 +11,16 @@ The code uses the following toolboxes and versions at the stage of development; 
 
 ## Syntax
 ```
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio, estimatedLp);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio, estimatedLp, gridPtUnit);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio, estimatedLp);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, beta, cRatio, estimatedLp, gridPtUnit);
 ```
 
 ## Input arguments
 * `OutputFileName` — the string that contains the output file name.
-* `image2D` — numeric array of a single input image or cells of numeric arrays of multiple images. The input image needs to be **square** (e.g. 512 x 512 pixels). The pixel values can be 8-bit, 16-bit or double. The image can be grayscale or RGB (will be converted into grayscale in the code).
+* `image3D` — numeric array of a single input image or cells of numeric arrays of multiple images. The input image needs to be **square** (e.g. 512 x 512 pixels). The pixel values can be 8-bit, 16-bit or double. The image can be grayscale or RGB (will be converted into grayscale in the code).
 * `GridSize` — the side of the sub image used in stage two. It should divide the image side (e.g. for 512 x 512 images, `GridSize` cannot fall out of {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}).
 * `NumOfShifts` — the number of shifts applied in stage two.
 * `PSFsigma` — the standard deviation of the approximated Gaussian point-spread function (PSF), in the unit of micrometers.
