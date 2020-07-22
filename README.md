@@ -1,5 +1,5 @@
-# Prior-Apprised Unsupervised Learning (PAUL) of curvilinear features
-Implementation of PAUL framwork on curvilinear features. Please cite the associated publication as: Yin, S., Tien, M. & Yang, H. (2020). Prior-Apprised Unsupervised Learning of Sub-Pixel Curvilinear Features in Low Signal-to-Noise Images. <em>Biophys. J.</em>, **118**, 2458-2469.
+# Prior-Apprised Unsupervised Learning (PAUL) of curvilinear features (3D)
+Implementation of 3D PAUL framwork on curvilinear features. Please cite the associated publication as: Yin, S., Tien, M. & Yang, H. (2020). Prior-Apprised Unsupervised Learning of Sub-Pixel Curvilinear Features in Low Signal-to-Noise Images. <em>Biophys. J.</em>, **118**, 2458-2469.
 
 ## Requirements
 The code uses the following toolboxes and versions at the stage of development; earlier versions might also work:
