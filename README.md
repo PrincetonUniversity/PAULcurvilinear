@@ -45,14 +45,14 @@ The output is saved in a .mat file containing the following variables:
 
 Run PAUL procedure on an example image ('Examples/image3D_1.mat')
 ```matlab
->> load('Examples/image3D_1.mat');
->> batchMTComputation('example_result',example_image,32,8,[0.1376 0.5229],[0.076 0.23],[],[],[],100);
+>> load('Example/image3D_1.mat');
+>> batchMTComputation3D('example_result',example_image,32,8,[0.1376 0.5229],[0.076 0.23],[],[],[],100);
 ```
 
 Plot the result
 ```matlab
-load('examples/image3D_1.mat');
-load('examples/image3D_1_result_Division_32x8.mat');
+load('Example/image3D_1.mat');
+load('Example/image3D_1_result_Division_32x8.mat');
 imagesc(sum(example_image,3)); % display the sum intensity projection
 hold on
 for i = 1:length(FinalX_central_allGps)
@@ -60,7 +60,7 @@ for i = 1:length(FinalX_central_allGps)
     plotUncertaintyTube(FinalY_B95_allGps{i},FinalX_B95_allGps{i},FinalZ_B95_allGps{i},'r',0.9,0.01);
 end
 ```
-![example_image](Example/image1_display.png)
-![example_result](Example/image1_overlay.png)
+<img src="Example/image1_display.png" width="200">
+<img src="Example/image1_overlay.png" width="200">
 
 
