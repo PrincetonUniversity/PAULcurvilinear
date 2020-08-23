@@ -60,6 +60,7 @@ for i = 1:length(FinalX_central_allGps)
     plotUncertaintyTube(FinalY_B95_allGps{i},FinalX_B95_allGps{i},FinalZ_B95_allGps{i},'r',0.9,0.01);
 end
 ```
-<img src="Example/image1_display.png" width="200"> <img src="Example/image1_overlay.png" width="200">
+
+![example_image](Example/image1_display.png) ![example_result](Example/image1_overlay.png)
 
 
