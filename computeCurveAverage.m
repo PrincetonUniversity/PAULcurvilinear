@@ -1,5 +1,5 @@
 function [FinalX, FinalY_central, FinalY_UB, FinalY_LB]=computeCurveAverage(principalCurve_cell_T,xmin_T,xmax_T,gridPtUnit)
-% principleCurve_cell_T is dim x n column vectors
+% principalCurve_cell_T is dim x n column vectors
 
 FinalX = xmin_T:gridPtUnit:xmax_T;
 curvePosX = cellfun(@(x) x(1,:),principalCurve_cell_T,'UniformOutput',false);
