@@ -58,7 +58,5 @@ for i = 1:length(FinalX_central_allGps)
     plot(FinalX_LB95_allGps{i},FinalY_LB95_allGps{i},'--','Color',[0.9290, 0.6940, 0.1250],'LineWidth',0.5);
 end
 ```
-![example_image](examples/image1_display.png)
-![example_result](examples/image1_result.png)
-
+<img src="examples/image1_display.png" width="300"> <img src="examples/image1_result.png" width="300">
 
