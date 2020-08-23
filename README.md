@@ -23,16 +23,16 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 
 ## Input arguments
 * `OutputFileName` — the string that contains the output file name.
-* `image3D` — numeric array of a single input image or cells of numeric arrays of multiple images. The input image needs to be grayscale and **square prism** (e.g. 512 x 512 x 40 pixels). The pixel values can be 8-bit, 16-bit or double. 
-* `GridSize` — the side of the sub image used in stage two. It should divide the larger image side (e.g. for 512 x 512 x 40 images, `GridSize` cannot fall out of {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}).
+* `image3D` — numeric array of a single input image or cells of numeric arrays of multiple images. The input image needs to be grayscale and **square prism** (e.g. 512 x 512 x 40 pixels). The voxel values can be 8-bit, 16-bit or double. 
+* `GridSize` — the side of the sub image along the most sampled dimension. It should divide the larger image side (e.g. for 512 x 512 x 40 images, `GridSize` cannot fall out of {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}).
 * `NumOfShifts` — the number of shifts applied in stage two.
 * `PSFsigma` — the standard deviations of the approximated Gaussian point-spread function (PSF), in the unit of micrometers. It can be a scalar (if all three standard deviations are the same), a 1x2 (or 2x1) vector (if two of them are identical), or a 1x3 (or 3x1) vector. The order should match that of the input image dimensions.
 * `pixelSize` — the size of the voxel, in the unit of micrometers. It can be a scalar (if all three standard deviations are the same), a 1x2 (or 2x1) vector (if two of them are identical), or a 1x3 (or 3x1) vector. The order should match that of the input image dimensions.
 * `alpha` — the alpha parameter in stage one. Default is 0.5. Put `[]` if using the default value.
 * `beta` — the beta parameter in stage one. Default is 0.5. Put `[]` if using the default value.
-* `cRatio` — the ratio between 2c^2 and maximum S^2 in stage one. Default is 5. Put `[]` if using the default value.
+* `cRatio` — the ratio between c and maximum S in stage one. Default is 5. Put `[]` if using the default value.
 * `estimatedLp` — the estimated persistence length of the features to be detected, in the unit of micrometers. Default is 5200. Put `[]` if using the default value.
-* `gridPtUnit` — the grid point density in the final PAUL principal curve, in the unit of pixels. Default is 0.1.
+* `gridPtUnit` — the grid point density in the final PAUL principal curve, in the unit of voxels. Default is 0.1.
 
 
 ## Output
@@ -60,7 +60,7 @@ for i = 1:length(FinalX_central_allGps)
     plotUncertaintyTube(FinalY_B95_allGps{i},FinalX_B95_allGps{i},FinalZ_B95_allGps{i},'r',0.9,0.01);
 end
 ```
-![example_image](examples/image1_display.png)
-![example_result](examples/image1_overlay.png)
+![example_image](Example/image1_display.png)
+![example_result](Example/image1_overlay.png)
 
 
