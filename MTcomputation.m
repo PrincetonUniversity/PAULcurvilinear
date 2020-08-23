@@ -117,7 +117,7 @@ for i=1:max(groupInd)
         continue;
     end
     
-    % 1. get the principle line direction using svd
+    % 1. get the principal direction
     EndPts=[P1x P1y;P2x P2y];
     EndPts_centered = EndPts-mean(EndPts);
     coeffEndPts = pca(EndPts_centered);
