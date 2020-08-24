@@ -6,6 +6,7 @@ beta = 0.5;
 cRatio = 5;
 l_KR = 20.4;
 gridPtUnit = 0.1;
+num_seg_thresh = 5;
 
 if ~isempty(varargin)
     if length(varargin) >=1 && ~isempty(varargin{1})
@@ -23,12 +24,15 @@ if ~isempty(varargin)
     if length(varargin) >=5 && ~isempty(varargin{5})
         gridPtUnit = varargin{5};
     end
+    if length(varargin) >=6 && ~isempty(varargin{6})
+        num_seg_thresh = varargin{6};
+    end
 end
 
 if isnumeric(image3D)
     [FinalX_central_allGps,FinalY_central_allGps,FinalZ_central_allGps,...
         FinalX_B95_allGps, FinalY_B95_allGps, FinalZ_B95_allGps,medium95PercError]=...
-        MTcomputation3D(image3D,NumOfShifts,GridSize,PSFsigma,pixelSize,alpha,beta,cRatio,l_KR,gridPtUnit);
+        MTcomputation3D(image3D,NumOfShifts,GridSize,PSFsigma,pixelSize,alpha,beta,cRatio,l_KR,gridPtUnit,num_seg_thresh);
     save([OutputFileName '_Division_' sprintf('%d',GridSize) 'x' sprintf('%d',NumOfShifts)],...
         'FinalX_central_allGps','FinalY_central_allGps','FinalZ_central_allGps',...
         'FinalX_B95_allGps','FinalY_B95_allGps','FinalZ_B95_allGps','medium95PercError');
@@ -50,7 +54,7 @@ else
     for i=1:NumOfImages
     [FinalX_central_allGps,FinalY_central_allGps,FinalZ_central_allGps,...
         FinalX_B95_allGps, FinalY_B95_allGps, FinalZ_B95_allGps,medium95PercError]=...
-        MTcomputation3D(image3D{i},NumOfShifts,GridSize,PSFsigma,pixelSize,alpha,beta,cRatio,l_KR,gridPtUnit);
+        MTcomputation3D(image3D{i},NumOfShifts,GridSize,PSFsigma,pixelSize,alpha,beta,cRatio,l_KR,gridPtUnit,num_seg_thresh);
         
         FinalX_central_allGps_allIMs(i)={FinalX_central_allGps};
         FinalY_central_allGps_allIMs(i)={FinalY_central_allGps};

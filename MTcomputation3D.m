@@ -1,6 +1,6 @@
 function [FinalX_central_allGps,FinalY_central_allGps,FinalZ_central_allGps,...
     FinalX_B95_allGps, FinalY_B95_allGps, FinalZ_B95_allGps,medium95percError] = ...
-    MTcomputation3D(image3D,NumOfShifts,GridSize,PSFsigma,pixelSize,alpha,beta,cRatio,l_KR,gridPtUnit)
+    MTcomputation3D(image3D,NumOfShifts,GridSize,PSFsigma,pixelSize,alpha,beta,cRatio,l_KR,gridPtUnit,num_seg_thresh)
 %% Feature enhancement requires a grayscale input
 
 if ~isa(image3D,'uint16')
@@ -319,8 +319,8 @@ for i=1:max(groupInd)
     P1y=Pt1(CurrGroupInd,2);P2y=Pt2(CurrGroupInd,2);
     P1z=Pt1(CurrGroupInd,3);P2z=Pt2(CurrGroupInd,3);
        
-    if length(P1x) < 5
-        continue; % short feature filtering
+    if length(P1x) < num_seg_thresh
+        continue; % short feature filtering;
     end
     
     % 1. get the principal line direction using svd

@@ -19,6 +19,7 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio);
 batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp);
 batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp, gridPtUnit);
+batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp, gridPtUnit,num_seg_thresh);
 ```
 
 ## Input arguments
@@ -33,6 +34,7 @@ batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pix
 * `cRatio` — the ratio between c and maximum S in stage one. Default is 5. Put `[]` if using the default value.
 * `estimatedLp` — the estimated persistence length of the features to be detected, in the unit of micrometers. Default is 5200. Put `[]` if using the default value.
 * `gridPtUnit` — the grid point density in the final PAUL principal curve, in the unit of voxels. Default is 0.1.
+* `num_seg_thresh` — minimum number of segments for a group to be passed on to phase two of stage three. Default is 5.
 
 
 ## Output
@@ -46,7 +48,7 @@ The output is saved in a .mat file containing the following variables:
 Run PAUL procedure on an example image ('Examples/image3D_1.mat')
 ```matlab
 >> load('Example/image3D_1.mat');
->> batchMTComputation3D('example_result',example_image,32,8,[0.1376 0.5229],[0.076 0.23],[],[],[],100);
+>> batchMTComputation3D('image3D_1_result',example_image,32,8,[0.1376 0.5229],[0.076 0.23],[],[],[],500,[],10);
 ```
 
 Plot the result
