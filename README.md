@@ -14,12 +14,12 @@ The code uses the following toolboxes and versions at the stage of development; 
 ## Syntax
 ```
 batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp, gridPtUnit);
-batchMTComputation(OutputFileName, image2D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp, gridPtUnit,num_seg_thresh);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp, gridPtUnit);
+batchMTComputation(OutputFileName, image3D, GridSize, NumOfShifts, PSFsigma, pixelSize, alpha, beta, cRatio, estimatedLp, gridPtUnit,num_seg_thresh);
 ```
 
 ## Input arguments
